@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Energy Clicker - Harness unlimited energy through 5 electrifying levels!">
+    <meta name="keywords" content="Energy Clicker, power game, electricity game, idle game">
+    <meta name="author" content="ClickerBee">
+    <meta name="theme-color" content="#1a1a1a">
+    <meta property="og:title" content="Energy Clicker - ClickerBee">
+    <meta property="og:description" content="Play Energy Clicker - Click to generate unlimited energy!">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://clickerbee.github.io/games/energy-clicker.html">
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "VideoGame",
+        "name": "Energy Clicker",
+        "description": "An electrifying energy-themed clicker game with power upgrades and 5 levels",
+        "url": "https://clickerbee.github.io/games/energy-clicker.html",
+        "gamePlayMode": ["SinglePlayer"],
+        "genre": "Idle Game",
+        "inLanguage": "en"
+    }
+    </script>
+    
+    <title>Energy Clicker - ClickerBee Games</title>
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/game-styles.css">
+</head>
+<body>
+    <div id="app">
+        <div id="header-container"></div>
+        
+        <main class="game-container">
+            <section class="game-header">
+                <div class="game-info">
+                    <h1>Energy Clicker</h1>
+                    <p class="game-description">Click to generate power and create endless energy!</p>
+                </div>
+                <a href="../index.html" class="btn btn-secondary">Back to Home</a>
+            </section>
+            
+            <section class="game-stats">
+                <div class="stat-card">
+                    <div class="stat-label">Energy</div>
+                    <div class="stat-value" id="score">0</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-label">Level</div>
+                    <div class="stat-value" id="level">1</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-label">Target</div>
+                    <div class="stat-value" id="target">100</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-label">Reward</div>
+                    <div class="stat-value" id="reward">$100</div>
+                </div>
+            </section>
+            
+            <section class="level-progress">
+                <div class="progress-bar-container">
+                    <div class="progress-bar" id="progress-bar"></div>
+                </div>
+                <p id="progress-text">0 / 100 energy</p>
+            </section>
+            
+            <section class="game-canvas">
+                <div class="clicker-box">
+                    <div class="game-image" id="game-image">⚡</div>
+                    <button class="clicker-btn" id="clicker-btn" onclick="handleClick()">
+                        GENERATE POWER!
+                    </button>
+                    <p class="combo" id="combo" style="display: none;">+1 🔥</p>
+                </div>
+            </section>
+            
+            <section class="upgrades">
+                <h2>Upgrades</h2>
+                <div class="upgrades-grid" id="upgrades-container"></div>
+            </section>
+            
+            <div class="modal" id="celebration-modal">
+                <div class="modal-content celebration-content">
+                    <h2 id="modal-title">Level Complete! 🎉</h2>
+                    <div class="celebration-image" id="celebration-image">🎊</div>
+                    <p id="modal-message">You earned <strong id="reward-amount">$100</strong>!</p>
+                    <button class="btn btn-primary" onclick="closeModal()">Next Level</button>
+                </div>
+            </div>
+        </main>
+        
+        <div id="footer-container"></div>
+    </div>
+    
+    <audio id="click-sound" src="../audio/click.mp3"></audio>
+    <audio id="level-complete-sound" src="../audio/level-complete.mp3"></audio>
+    
+    <script src="../js/header.js"></script>
+    <script src="../js/footer.js"></script>
+    <script src="../js/game-engine.js"></script>
+    <script>
+        const gameConfig = {
+            name: 'Energy Clicker',
+            levelTargets: [100, 250, 500, 1000, 2500],
+            rewards: [100, 250, 500, 1000, 2500],
+            levelImages: ['⚡', '⚡⚡', '⚡⚡⚡', '⚡⚡⚡⚡', '⚡⚡⚡⚡⚡'],
+            upgrades: [
+                { name: 'Power Boost', cost: 50, multiplier: 2, icon: '🔌' },
+                { name: 'Solar Panel', cost: 150, perSecond: 1, icon: '☀️' },
+                { name: 'Nuclear Reactor', cost: 300, multiplier: 5, icon: '☢️' }
+            ]
+        };
+        
+        initializeGame(gameConfig);
+    </script>
+</body>
+</html>

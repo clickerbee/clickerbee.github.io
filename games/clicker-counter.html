@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Clicker Counter - Click to count higher and unlock number achievements through 5 progressive levels!">
+    <meta name="keywords" content="Clicker Counter, number clicker, counting game, idle game">
+    <meta name="author" content="ClickerBee">
+    <meta name="theme-color" content="#1a1a1a">
+    <meta property="og:title" content="Clicker Counter - ClickerBee">
+    <meta property="og:description" content="Play Clicker Counter - Click to count and reach higher numbers!">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://clickerbee.github.io/games/clicker-counter.html">
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "VideoGame",
+        "name": "Clicker Counter",
+        "description": "A progressive counter clicker game with 5 levels and achievement system",
+        "url": "https://clickerbee.github.io/games/clicker-counter.html",
+        "gamePlayMode": ["SinglePlayer"],
+        "genre": "Idle Game",
+        "inLanguage": "en"
+    }
+    </script>
+    
+    <title>Clicker Counter - ClickerBee Games</title>
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/game-styles.css">
+</head>
+<body>
+    <div id="app">
+        <div id="header-container"></div>
+        
+        <main class="game-container">
+            <section class="game-header">
+                <div class="game-info">
+                    <h1>Clicker Counter</h1>
+                    <p class="game-description">Click to count higher and reach astronomical numbers!</p>
+                </div>
+                <a href="../index.html" class="btn btn-secondary">Back to Home</a>
+            </section>
+            
+            <section class="game-stats">
+                <div class="stat-card">
+                    <div class="stat-label">Count</div>
+                    <div class="stat-value" id="score">0</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-label">Level</div>
+                    <div class="stat-value" id="level">1</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-label">Target</div>
+                    <div class="stat-value" id="target">100</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-label">Reward</div>
+                    <div class="stat-value" id="reward">$100</div>
+                </div>
+            </section>
+            
+            <section class="level-progress">
+                <div class="progress-bar-container">
+                    <div class="progress-bar" id="progress-bar"></div>
+                </div>
+                <p id="progress-text">0 / 100 clicks</p>
+            </section>
+            
+            <section class="game-canvas">
+                <div class="clicker-box">
+                    <div class="game-image" id="game-image">🔢</div>
+                    <button class="clicker-btn" id="clicker-btn" onclick="handleClick()">
+                        COUNT UP!
+                    </button>
+                    <p class="combo" id="combo" style="display: none;">+1 🔥</p>
+                </div>
+            </section>
+            
+            <section class="upgrades">
+                <h2>Upgrades</h2>
+                <div class="upgrades-grid" id="upgrades-container"></div>
+            </section>
+            
+            <div class="modal" id="celebration-modal">
+                <div class="modal-content celebration-content">
+                    <h2 id="modal-title">Level Complete! 🎉</h2>
+                    <div class="celebration-image" id="celebration-image">🎊</div>
+                    <p id="modal-message">You earned <strong id="reward-amount">$100</strong>!</p>
+                    <button class="btn btn-primary" onclick="closeModal()">Next Level</button>
+                </div>
+            </div>
+        </main>
+        
+        <div id="footer-container"></div>
+    </div>
+    
+    <audio id="click-sound" src="../audio/click.mp3"></audio>
+    <audio id="level-complete-sound" src="../audio/level-complete.mp3"></audio>
+    
+    <script src="../js/header.js"></script>
+    <script src="../js/footer.js"></script>
+    <script src="../js/game-engine.js"></script>
+    <script>
+        const gameConfig = {
+            name: 'Clicker Counter',
+            levelTargets: [100, 250, 500, 1000, 2500],
+            rewards: [100, 250, 500, 1000, 2500],
+            levelImages: ['🔢', '🔢🔢', '🔢🔢🔢', '🔢🔢🔢🔢', '🔢🔢🔢🔢🔢'],
+            upgrades: [
+                { name: 'Number Boost', cost: 50, multiplier: 2, icon: '⬆️' },
+                { name: 'Auto Count', cost: 150, perSecond: 1, icon: '🤖' },
+                { name: 'Hyper Count', cost: 300, multiplier: 5, icon: '⚡' }
+            ]
+        };
+        
+        initializeGame(gameConfig);
+    </script>
+</body>
+</html>
