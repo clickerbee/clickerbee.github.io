@@ -8,7 +8,7 @@ function loadHeader() {
                 </div>
                 <button class="menu-toggle" id="menu-toggle">☰</button>
                 <nav class="nav" id="nav">
-                    <a href="#hero" onclick="closeMenu()">Home</a>
+                    <a href="/" onclick="closeMenu()">Home</a>
                     <a href="#games" onclick="closeMenu()">Games</a>
                     <a href="#popular" onclick="closeMenu()">Popular</a>
                     <a href="#about" onclick="closeMenu()">About</a>
