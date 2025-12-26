@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <rect fill="#0066ff" width="100" height="100"/>
+  <circle cx="35" cy="35" r="15" fill="#9933ff"/>
+  <circle cx="65" cy="35" r="15" fill="#00cc66"/>
+  <circle cx="50" cy="65" r="20" fill="#ffcc00"/>
+  <path d="M 50 50 Q 45 60 50 70 Q 55 60 50 50" fill="#ff3333"/>
+  <text x="50" y="85" font-size="40" font-weight="900" text-anchor="middle" fill="#ffffff" font-family="Arial" font-weight="bold">🐝</text>
+</svg>
