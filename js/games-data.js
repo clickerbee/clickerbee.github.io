@@ -1,19 +1,19 @@
 const gamesData = [
-  { name: "Capybara Clicker", emoji: "🦆" },
-  { name: "Planet Clicker", emoji: "🪐" },
-  { name: "Space Bar Clicker", emoji: "⌨️" },
-  { name: "Clicker Counter", emoji: "🔢" },
-  { name: "Clicker Heroes", emoji: "⚔️" },
-  { name: "Candy Clicker", emoji: "🍬" },
-  { name: "Duck Clicker", emoji: "🦆" },
-  { name: "Energy Clicker", emoji: "⚡" },
-  { name: "Money Clicker", emoji: "💰" },
-  { name: "Button Clicker", emoji: "🔘" },
-  { name: "World Clicker", emoji: "🌍" },
-  { name: "Burger Clicker", emoji: "🍔" },
-  { name: "Clock Clicker", emoji: "⏰" },
-  { name: "Kiwi Clicker", emoji: "🥝" },
-  { name: "Cat Clicker", emoji: "🐱" },
+  { name: "Capybara Clicker", emoji: "🦫", link: "games/capybara-clicker.html" },
+  { name: "Planet Clicker", emoji: "🪐", link: "games/planet-clicker.html" },
+  { name: "Space Bar Clicker", emoji: "⌨️", link: "games/space-bar-clicker.html" },
+  { name: "Clicker Counter", emoji: "🔢", link: "#" },
+  { name: "Clicker Heroes", emoji: "⚔️", link: "#" },
+  { name: "Candy Clicker", emoji: "🍬", link: "games/candy-clicker.html" },
+  { name: "Duck Clicker", emoji: "🦆", link: "#" },
+  { name: "Energy Clicker", emoji: "⚡", link: "#" },
+  { name: "Money Clicker", emoji: "💰", link: "games/money-clicker.html" },
+  { name: "Button Clicker", emoji: "🔘", link: "#" },
+  { name: "World Clicker", emoji: "🌍", link: "#" },
+  { name: "Burger Clicker", emoji: "🍔", link: "#" },
+  { name: "Clock Clicker", emoji: "⏰", link: "#" },
+  { name: "Kiwi Clicker", emoji: "🥝", link: "#" },
+  { name: "Cat Clicker", emoji: "🐱", link: "#" },
 ]
 
 function renderGames() {
@@ -21,7 +21,7 @@ function renderGames() {
   container.innerHTML = gamesData
     .map(
       (game, index) => `
-        <div class="game-card" onclick="playGame('${game.name}')">
+        <div class="game-card" onclick="playGame('${game.name}', '${game.link}')">
             <div class="game-emoji">${game.emoji}</div>
             <h3>${game.name}</h3>
         </div>
@@ -30,8 +30,12 @@ function renderGames() {
     .join("")
 }
 
-function playGame(gameName) {
-  alert(`🎮 ${gameName} coming soon!\n\nClick away to unlock the full game experience!`)
+function playGame(gameName, gameLink) {
+  if (gameLink && gameLink !== "#") {
+    window.location.href = gameLink
+  } else {
+    alert(`🎮 ${gameName} coming soon!\n\nClick away to unlock the full game experience!`)
+  }
 }
 
 document.addEventListener("DOMContentLoaded", renderGames)

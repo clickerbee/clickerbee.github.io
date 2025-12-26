@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Capybara Clicker - Click to collect capybaras and progress through 5 exciting levels with upgrades and rewards!">
+    <meta name="keywords" content="Capybara Clicker, clicker game, idle game, capybara">
+    <meta name="author" content="ClickerBee">
+    <meta name="theme-color" content="#1a1a1a">
+    <meta property="og:title" content="Capybara Clicker - ClickerBee">
+    <meta property="og:description" content="Play Capybara Clicker - Click to collect capybaras and progress through 5 levels!">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://clickerbee.github.io/games/capybara-clicker.html">
+    
+    <!-- VideoGame Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "VideoGame",
+        "name": "Capybara Clicker",
+        "description": "A progressive clicker game featuring capybaras with 5 levels, score tracking, and reward systems",
+        "url": "https://clickerbee.github.io/games/capybara-clicker.html",
+        "gamePlayMode": ["SinglePlayer"],
+        "genre": "Idle Game",
+        "inLanguage": "en",
+        "applicationCategory": "Game"
+    }
+    </script>
+    
+    <title>Capybara Clicker - ClickerBee Games</title>
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/game-styles.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Header loaded via JS -->
+        <div id="header-container"></div>
+        
+        <!-- Game Container -->
+        <main class="game-container">
+            <section class="game-header">
+                <div class="game-info">
+                    <h1>Capybara Clicker</h1>
+                    <p class="game-description">Click the capybara to collect them and progress through 5 levels!</p>
+                </div>
+                <a href="../index.html" class="btn btn-secondary">Back to Home</a>
+            </section>
+            
+            <!-- Game Stats -->
+            <section class="game-stats">
+                <div class="stat-card">
+                    <div class="stat-label">Score</div>
+                    <div class="stat-value" id="score">0</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-label">Level</div>
+                    <div class="stat-value" id="level">1</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-label">Target</div>
+                    <div class="stat-value" id="target">100</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-label">Reward</div>
+                    <div class="stat-value" id="reward">$100</div>
+                </div>
+            </section>
+            
+            <!-- Level Progress -->
+            <section class="level-progress">
+                <div class="progress-bar-container">
+                    <div class="progress-bar" id="progress-bar"></div>
+                </div>
+                <p id="progress-text">0 / 100 clicks</p>
+            </section>
+            
+            <!-- Game Canvas -->
+            <section class="game-canvas">
+                <div class="clicker-box">
+                    <div class="game-image" id="game-image">🦫</div>
+                    <button class="clicker-btn" id="clicker-btn" onclick="handleClick()">
+                        CLICK ME!
+                    </button>
+                    <p class="combo" id="combo" style="display: none;">+1 🔥</p>
+                </div>
+            </section>
+            
+            <!-- Upgrades Section -->
+            <section class="upgrades">
+                <h2>Upgrades</h2>
+                <div class="upgrades-grid" id="upgrades-container"></div>
+            </section>
+            
+            <!-- Level Completion Modal -->
+            <div class="modal" id="celebration-modal">
+                <div class="modal-content celebration-content">
+                    <h2 id="modal-title">Level Complete! 🎉</h2>
+                    <div class="celebration-image" id="celebration-image">🎊</div>
+                    <p id="modal-message">You earned <strong id="reward-amount">$100</strong>!</p>
+                    <button class="btn btn-primary" onclick="closeModal()">Next Level</button>
+                </div>
+            </div>
+        </main>
+        
+        <!-- Footer loaded via JS -->
+        <div id="footer-container"></div>
+    </div>
+    
+    <!-- Shared Game Audio -->
+    <audio id="click-sound" src="../audio/click.mp3"></audio>
+    <audio id="level-complete-sound" src="../audio/level-complete.mp3"></audio>
+    
+    <script src="../js/header.js"></script>
+    <script src="../js/footer.js"></script>
+    <script src="../js/game-engine.js"></script>
+    <script>
+        // Game Configuration
+        const gameConfig = {
+            name: 'Capybara Clicker',
+            levelTargets: [100, 250, 500, 1000, 2500],
+            rewards: [100, 250, 500, 1000, 2500],
+            levelImages: ['🦫', '🦫🦫', '🦫🦫🦫', '🦫🦫🦫🦫', '🦫🦫🦫🦫🦫'],
+            upgrades: [
+                { name: 'Double Tap', cost: 50, multiplier: 2, icon: '⚡' },
+                { name: 'Auto Clicker', cost: 150, perSecond: 1, icon: '🤖' },
+                { name: 'Mega Click', cost: 300, multiplier: 5, icon: '💥' }
+            ]
+        };
+        
+        // Initialize game with config
+        initializeGame(gameConfig);
+    </script>
+</body>
+</html>
