@@ -29,12 +29,12 @@ function loadFooter() {
                 </div>
                 
                 <div class="footer-section">
-                    <h4>Connect</h4>
+                    <h4>Most Played</h4>
                     <div class="social-links">
-                        <a href="#" title="GitHub">🐙</a>
-                        <a href="#" title="Twitter">𝕏</a>
-                        <a href="#" title="Discord">💬</a>
-                        <a href="contact.html" title="Email">✉️</a>
+                        <a href="/games/clicker-heroes.html" title="Heroes">Clicker Heroes</a>
+                        <a href="/games/candy-clicker.html" title="Candy">Candy Clicker</a>
+                        <a href="/games/energy-clicker.html" title="Energy">Energy Clicker</a>
+                        <a href="/games/kiwi-clicker.html" title="kiwi">Kiwi Clicker</a>
                     </div>
                 </div>
             </div>
