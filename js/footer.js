@@ -29,7 +29,7 @@ function loadFooter() {
                 </div>
 
                 <div class="footer-section">
-                    <h4>Popular Games</h4>
+                    <h4>Most Played</h4>
                     <ul>
                         <li><a href="/games/clicker-heroes.html">Clicker Heroes</a></li>
                         <li><a href="/games/candy-clicker.html">Candy Clicker</a></li>
