@@ -27,16 +27,17 @@ function loadFooter() {
                         <li><a href="games/money-clicker.html">Money Clicker</a></li>
                     </ul>
                 </div>
-                
+
                 <div class="footer-section">
-                    <h4>Most Played</h4>
-                    <div class="social-links">
-                        <a href="/games/clicker-heroes.html" title="Heroes">Clicker Heroes</a>
-                        <a href="/games/candy-clicker.html" title="Candy">Candy Clicker</a>
-                        <a href="/games/energy-clicker.html" title="Energy">Energy Clicker</a>
-                        <a href="/games/kiwi-clicker.html" title="kiwi">Kiwi Clicker</a>
-                    </div>
-                </div>
+                    <h4>Popular Games</h4>
+                    <ul>
+                        <li><a href="/games/clicker-heroes.html">Clicker Heroes</a></li>
+                        <li><a href="/games/candy-clicker.html">Candy Clicker</a></li>
+                        <li><a href="/games/energy-clicker.html">Energy Clicker</a></li>
+                        <li><a href="/games/kiwi-clicker.html">Kiwi Clicker</a></li>
+                    </ul>
+                </div>               
+                
             </div>
             
             <div class="footer-bottom">
