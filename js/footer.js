@@ -10,20 +10,21 @@ function loadFooter() {
                 <div class="footer-section">
                     <h4>Pages</h4>
                     <ul>
-                        <li><a href="#hero">Home</a></li>
-                        <li><a href="#games">Games</a></li>
-                        <li><a href="#popular">Popular</a></li>
-                        <li><a href="#about">About</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="privacy.html">Privacy</a></li>
+                        <li><a href="terms.html">Terms</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-section">
                     <h4>Popular Games</h4>
                     <ul>
-                        <li><a href="#games">Capybara Clicker</a></li>
-                        <li><a href="#games">Planet Clicker</a></li>
-                        <li><a href="#games">Space Bar Clicker</a></li>
-                        <li><a href="#games">Money Clicker</a></li>
+                        <li><a href="games/capybara-clicker.html">Capybara Clicker</a></li>
+                        <li><a href="games/planet-clicker.html">Planet Clicker</a></li>
+                        <li><a href="games/space-bar-clicker.html">Space Bar Clicker</a></li>
+                        <li><a href="games/money-clicker.html">Money Clicker</a></li>
                     </ul>
                 </div>
                 
@@ -33,7 +34,7 @@ function loadFooter() {
                         <a href="#" title="GitHub">🐙</a>
                         <a href="#" title="Twitter">𝕏</a>
                         <a href="#" title="Discord">💬</a>
-                        <a href="#" title="Email">✉️</a>
+                        <a href="contact.html" title="Email">✉️</a>
                     </div>
                 </div>
             </div>
