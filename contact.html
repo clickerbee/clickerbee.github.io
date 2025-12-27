@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact ClickerBee - Get in touch with our team. Send feedback, report bugs, or suggest new clicker games.">
+    <meta name="keywords" content="contact us, feedback, support, bug report, game suggestions">
+    <meta name="author" content="ClickerBee">
+    <meta name="theme-color" content="#1a1a1a">
+    <meta property="og:title" content="Contact ClickerBee">
+    <meta property="og:description" content="Get in touch with the ClickerBee team. We'd love to hear from you!">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://clickerbee.github.io/contact.html">
+    
+    <title>Contact ClickerBee - Get in Touch</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="apple-touch-icon" href="logo.svg">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="app">
+        <div id="header-container"></div>
+        
+        <section class="contact-page">
+            <div class="contact-container">
+                <h1>Contact ClickerBee</h1>
+                <p class="contact-intro">Have a question, suggestion, or feedback? We'd love to hear from you! Fill out the form below and we'll get back to you as soon as possible.</p>
+                
+                <div class="contact-content">
+                    <div class="contact-form-wrapper">
+                        <form class="contact-form" id="contactForm">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" required placeholder="Your Name" class="form-input">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required placeholder="your@email.com" class="form-input">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <select id="subject" name="subject" required class="form-input">
+                                    <option value="">Select a subject</option>
+                                    <option value="feedback">Game Feedback</option>
+                                    <option value="bug">Bug Report</option>
+                                    <option value="suggestion">Game Suggestion</option>
+                                    <option value="partnership">Partnership Inquiry</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" required placeholder="Your message here..." rows="6" class="form-input"></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary">Send Message</button>
+                            <div id="formMessage" class="form-message"></div>
+                        </form>
+                    </div>
+                    
+                    <div class="contact-info">
+                        <h2>Other Ways to Reach Us</h2>
+                        
+                        <div class="info-block">
+                            <div class="info-icon">💌</div>
+                            <div class="info-content">
+                                <h3>Email</h3>
+                                <p><a href="mailto:hello@clickerbee.com">hello@clickerbee.com</a></p>
+                            </div>
+                        </div>
+                        
+                        <div class="info-block">
+                            <div class="info-icon">🌐</div>
+                            <div class="info-content">
+                                <h3>Website</h3>
+                                <p><a href="https://clickerbee.github.io">https://clickerbee.github.io</a></p>
+                            </div>
+                        </div>
+                        
+                        <div class="info-block">
+                            <div class="info-icon">💬</div>
+                            <div class="info-content">
+                                <h3>Discord Community</h3>
+                                <p>Join our community server for updates and discussions</p>
+                            </div>
+                        </div>
+                        
+                        <div class="info-block">
+                            <div class="info-icon">⏰</div>
+                            <div class="info-content">
+                                <h3>Response Time</h3>
+                                <p>We typically respond within 24-48 hours</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-section">
+                            <h3>Quick Answers</h3>
+                            <div class="faq-item">
+                                <h4>How do I reset my game progress?</h4>
+                                <p>Clear your browser cache or open the game in an incognito window to start fresh.</p>
+                            </div>
+                            <div class="faq-item">
+                                <h4>Can I play on mobile?</h4>
+                                <p>Yes! All our games are fully optimized for mobile devices.</p>
+                            </div>
+                            <div class="faq-item">
+                                <h4>Do you accept game suggestions?</h4>
+                                <p>We love hearing ideas for new games. Send us your suggestions!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <div id="footer-container"></div>
+    </div>
+    
+    <style>
+        .contact-page {
+            min-height: calc(100vh - 200px);
+            padding: 4rem 2rem;
+            background-color: var(--white);
+            border-bottom: 4px solid var(--black);
+        }
+        
+        .contact-container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        
+        .contact-page h1 {
+            color: var(--primary-orange);
+            border-bottom: 4px solid var(--primary-orange);
+            padding-bottom: 1rem;
+            margin-bottom: 1rem;
+        }
+        
+        .contact-intro {
+            color: var(--dark-gray);
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+        
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 3rem;
+        }
+        
+        .contact-form-wrapper {
+            background-color: var(--light-gray);
+            padding: 2rem;
+            border: 3px solid var(--primary-orange);
+        }
+        
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        
+        .form-group label {
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            color: var(--black);
+            letter-spacing: 0.05em;
+        }
+        
+        .form-input {
+            padding: 0.75rem;
+            border: 2px solid var(--black);
+            background-color: var(--white);
+            font-family: "Courier New", monospace;
+            font-size: 1rem;
+            color: var(--black);
+            transition: all var(--transition);
+        }
+        
+        .form-input:focus {
+            outline: none;
+            border-color: var(--primary-orange);
+            box-shadow: 0 0 0 3px rgba(255, 153, 0, 0.1);
+        }
+        
+        .form-input::placeholder {
+            color: #999;
+        }
+        
+        .form-message {
+            padding: 1rem;
+            margin-top: 1rem;
+            border-radius: 0;
+            text-align: center;
+            display: none;
+        }
+        
+        .form-message.success {
+            display: block;
+            background-color: #d4edda;
+            color: #155724;
+            border: 2px solid #28a745;
+        }
+        
+        .form-message.error {
+            display: block;
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 2px solid #f5c6cb;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+        
+        .contact-info h2 {
+            color: var(--primary-red);
+            border-left: 4px solid var(--primary-red);
+            padding-left: 1rem;
+            margin: 0;
+        }
+        
+        .info-block {
+            display: flex;
+            gap: 1.5rem;
+            padding: 1.5rem;
+            background-color: var(--light-gray);
+            border: 2px solid var(--primary-red);
+            transition: all var(--transition);
+        }
+        
+        .info-block:hover {
+            transform: translateX(4px);
+        }
+        
+        .info-icon {
+            font-size: 2rem;
+            flex-shrink: 0;
+        }
+        
+        .info-content h3 {
+            font-size: 1rem;
+            margin: 0 0 0.5rem 0;
+            color: var(--black);
+        }
+        
+        .info-content p {
+            margin: 0;
+            color: var(--dark-gray);
+            font-size: 0.9rem;
+        }
+        
+        .info-content a {
+            color: var(--primary-red);
+            text-decoration: none;
+            border-bottom: 2px solid var(--primary-red);
+            transition: all var(--transition);
+        }
+        
+        .info-content a:hover {
+            color: var(--primary-orange);
+            border-bottom-color: var(--primary-orange);
+        }
+        
+        .faq-section {
+            background-color: var(--light-gray);
+            padding: 1.5rem;
+            border: 2px dashed var(--primary-purple);
+        }
+        
+        .faq-section h3 {
+            color: var(--primary-purple);
+            margin-top: 0;
+        }
+        
+        .faq-item {
+            margin-bottom: 1rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--dark-gray);
+        }
+        
+        .faq-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        
+        .faq-item h4 {
+            color: var(--black);
+            margin: 0 0 0.5rem 0;
+            font-size: 0.95rem;
+        }
+        
+        .faq-item p {
+            margin: 0;
+            color: var(--dark-gray);
+            font-size: 0.85rem;
+            line-height: 1.6;
+        }
+        
+        @media (max-width: 768px) {
+            .contact-page {
+                padding: 2rem 1rem;
+            }
+            
+            .contact-content {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+    
+    <script src="js/header.js"></script>
+    <script src="js/footer.js"></script>
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+            
+            const formMessage = document.getElementById('formMessage');
+            
+            // Validate email format
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                formMessage.textContent = 'Please enter a valid email address.';
+                formMessage.className = 'form-message error';
+                return;
+            }
+            
+            // Show success message
+            formMessage.textContent = 'Thank you for your message! We will get back to you soon.';
+            formMessage.className = 'form-message success';
+            
+            // Reset form
+            this.reset();
+            
+            // Hide message after 5 seconds
+            setTimeout(() => {
+                formMessage.className = 'form-message';
+            }, 5000);
+        });
+    </script>
+</body>
+</html>
